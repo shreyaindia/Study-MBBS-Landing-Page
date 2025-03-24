@@ -1,0 +1,325 @@
+<html>
+    <head>
+        <title>Study MBBS Abroad</title>
+        <style>
+            body{
+                margin: 0%;
+                padding: 0%;
+                background-color: rgb(198, 194, 194);
+            }
+            .section{
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 100%;
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+            .head{
+                background-image: url("ima1.jpeg");
+                
+            }
+            #hc1{
+                width: 50%;
+                align-content: center;
+                text-align: center;
+            }
+            #tophe{
+                color:Blue;
+                font-size: 90px;
+            }
+           
+            .bt1{
+                padding: 2% 5%;
+                background-color: green;
+                color: aliceblue;
+                font-size: large;
+                font-weight: bold;
+                border-radius: 10px;
+                border: 1px solid green;
+                text-decoration: none;
+            }
+            .bt1:hover{
+                
+                border: 5px solid green;
+                
+            }            
+            .s1{
+                background-image: url("front.jpeg");
+            }
+            #hc2{
+                font-size: 50px;
+                font-weight: bold;
+                color: rgb(34, 3, 63);
+                width: 90%;
+                padding: 0% 5% 1% 5%;
+                text-align: center;
+                
+            }
+            .point1{
+                color:darkgreen;
+                font-size: 25px;
+                line-height: 40px;
+                width: 60%;
+                padding-left: 7%;
+            }
+            .box1{
+                width: 40%;
+                padding: 2%;
+                margin: 1% 3%;
+                float: left;
+                background-color: white;
+                border: 1px soild blue;
+                border-radius: 5px;
+            }
+            .form1{
+                background-color: rgb(110, 135, 237);
+                margin: 0% 10%;
+                padding: 5%;
+
+            }
+            .input1{
+                color: white;
+                padding: 2%;
+                width: 50%;
+                font-size: 25px;
+            }
+            .inpbox1{
+                width: 95%;
+                font-size: 20px;
+                border: 1px solid red;
+                padding: 3%;
+                border-radius: 5px;
+            }
+            footer{
+                width: 100%;
+                height: 10%;
+                background-color: blue;
+                align-content: center;
+                text-align:center;
+                color:white;
+
+            }
+            .error { color: red; font-size: 14px; padding:2%; }
+            @media(max-width:1300px){
+	            #tophe{
+                    font-size: 70px;
+                }
+            }
+            @media(max-width:1100px){
+	            #tophe{
+                    font-size: 50px;
+                }
+                #hc2{
+                    font-size: 35px;
+                }
+                .point1{
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+            @media(max-width:760px){
+	            #tophe{
+                    font-size: 30px;
+                }
+                #hc2{
+                    font-size: 25px;
+                }
+                .point1{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                .box1{
+                    width: 90%;
+                }
+            }    
+        </style>
+        <script>
+
+            function validateForm() {
+                let isValid = true;
+                console.log("hello");
+
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let phone = document.getElementById("phone").value.trim();
+                let country = document.getElementById("countrypre").value.trim();
+
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let phonePattern = /^[0-9]{10}$/;
+                let namePattern = /^[A-Za-z\s]+$/;
+
+                // Reset previous errors
+                document.getElementById("nameError").innerText = "";
+                document.getElementById("emailError").innerText = "";
+                document.getElementById("phoneError").innerText = "";
+                document.getElementById("countryError").innerText = "";
+
+                // Name validation
+                if (name === "") {
+                    document.getElementById("nameError").innerText = "Name is required!";
+                    isValid = false;
+                }else if (!namePattern.test(name)) {
+                    document.getElementById("nameError").innerText = "Name must be only Alphabet";
+                    isValid = false;
+                }
+
+                // Email validation
+                if (email === "") {
+                    document.getElementById("emailError").innerText = "Email is required!";
+                    isValid = false;
+                } else if (!emailPattern.test(email)) {
+                    document.getElementById("emailError").innerText = "Invalid email format!";
+                    isValid = false;
+                }
+
+                // Phone validation
+                if (phone === "") {
+                    document.getElementById("phoneError").innerText = "Phone number is required!";
+                    isValid = false;
+                } else if (!phonePattern.test(phone)) {
+                    document.getElementById("phoneError").innerText = "Phone must be 10 digits!";
+                    isValid = false;
+                }
+
+                // Country validation
+                if (country === "") {
+                    document.getElementById("countryError").innerText = "Country preference is required!";
+                    isValid = false;
+                }else if (!namePattern.test(country)) {
+                    document.getElementById("countryError").innerText = "Invalid Country";
+                    isValid = false;
+                }
+
+                return isValid; // Return false if any validation fails, preventing form submission
+            }
+        </script>
+    </head>
+    <body>
+        <header class="head section">
+            <div id="hc1">
+            <h1 id="tophe">Fulfill Your Dream to  Study MBBS Abroad! </h1>
+            <a class="bt1" href="#cat" >Apply Now</a>
+            </div>
+        </header>
+        <div class="section s1">
+            <h2 id="hc2" style="width: 60%;">Why Study MBBS Abroad</h2>
+            <ul class="point1">
+                <li>Affordable Education</li>
+                <li>Globally Recognized Degrees</li>
+                <li>High-Quality Education & Infrastructure</li>
+                <li>No Entrance Exams (Except NEET for Indian Students)</li>
+                <li>Better Career Opportunities</li>
+                <li>International Exposure</li>
+                <li>English-Medium Programs</li>   
+            </ul>
+        </div>
+        <div class="section" style="align-items: center;">
+            <h2 id="hc2" style="color:rgb(22, 120, 190)">Top MBBS Destinations</h2>
+            <!--Russia-->
+            <div class="box1">
+                <h3>Russia</h3>
+                <p><strong>Tuition Fees:</strong> $3,500 - $7,000/year</p>
+                <p><strong>Top Universities:</strong> Moscow State University, Kazan Federal University</p>
+                <p><strong>Advantages:</strong> Low-cost education, WHO-recognized, globally accepted degree.</p>
+            </div>
+            <!--Uzbekistan-->
+            <div class="box1">
+                <h3>Uzbekistan</h3>
+                <p><strong>Tuition Fees:</strong> $3,000 - $5,000/year</p>
+                <p><strong>Top Universities:</strong> Tashkent Medical Academy, Samarkand State Medical University</p>
+                <p><strong>Advantages:</strong> English-medium programs, affordable living, high-quality education.</p>
+            </div>
+            
+    
+            <!-- Egypt -->
+            <div class="box1">
+                <h3>Egypt</h3>
+                <p><strong>Tuition Fees:</strong> $6,000 - $9,000/year</p>
+                <p><strong>Top Universities:</strong> Cairo University, Ain Shams University</p>
+                <p><strong>Advantages:</strong> Strong medical infrastructure, English-medium, globally recognized degrees.</p>
+            </div>
+    
+            <!-- Philippines -->
+            <div class="box1">
+                <h3>Philippines</h3>
+                <p><strong>Tuition Fees:</strong> $3,000 - $5,500/year</p>
+                <p><strong>Top Universities:</strong> University of Santo Tomas, Davao Medical School</p>
+                <p><strong>Advantages:</strong> US-based curriculum, high FMGE pass rate, English-medium courses.</p>
+            </div>
+    
+            <!-- Kazakhstan -->
+            <div class="box1">
+                <h3>Kazakhstan</h3>
+                <p"><strong>Tuition Fees:</strong> $3,500 - $6,000/year</p>
+                <p><strong>Top Universities:</strong> Al-Farabi Kazakh National University, Astana Medical University</p>
+                <p><strong>Advantages:</strong> Low-cost education, WHO & NMC approved, good infrastructure.</p>
+            </div>
+    
+            <!-- Georgia -->
+            <div class="box1">
+                <h3>Georgia</h3>
+                <p><strong>Tuition Fees:</strong> $5,000 - $8,000/year</p>
+                <p><strong>Top Universities:</strong> Tbilisi State Medical University, Batumi Shota Rustaveli University</p>
+                <p><strong>Advantages:</strong> European education system, high global acceptance, English-medium courses.</p>
+            </div>
+    
+            
+            </div>
+        </div>
+        <div class="section" style="align-items: center;">
+            <h2 id="hc2" style="color:rgb(136, 9, 34); padding-top: 5%;">Eligibility Criteria</h2>
+            <ul class="point1" style="color:rgb(3, 89, 104); font-weight: bold;width: 90%;">
+                <li>Age Requirement atleast 18year</li>  
+                <li>10th & 12th mark sheets and passing certificates</li>  
+                <li>Birth certificate</li>  
+                <li>Medical fitness certificate</li> 
+                <li>English Proficiency </li>  
+                <li>NEET Exam Requirement (For Indian Students)</li>  
+                <li>At least 50% in Physics, Chemistry, and Biology (PCB) for general category students.</li>
+                <li>40% for reserved categories (SC/ST/OBC) (as per Indian NMC guidelines).</li> 
+            </ul>
+        </div>        
+        <div class="section" id="cat">
+            <center>
+            <form method="get" action="" style="color:rgba(67,52 4, 4, 0.193)"  class="form1" onsubmit="return validateForm()" >
+                <table>
+                    <caption id="hc2">Call-to-Action</caption>
+                    <tr>
+                        <td  class="input1">Name:</td>
+                        <td>
+                            <input type="text" name="name" id="name" class="inpbox1"/>
+                            <span class="error" id="nameError"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input1">Email:</td>
+                        <td>
+                            <input type="email" name="email" id="email" class="inpbox1"/>
+                            <span class="error" id="emailError"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input1">Phone:</td>
+                        <td>
+                            <input type="tel" name="phone" id="phone" class="inpbox1"/>
+                            <span class="error" id="phoneError"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input1">Country Preference:</td>
+                        <td>
+                            <input type="text" name="countrypre" id="countrypre" class="inpbox1"/>
+                            <span class="error" id="countryError"></span>
+                        </td>
+                    </tr><tr>
+                        <td></td>
+                        <td><input type="submit" name="Submit" class="bt1" /></td>
+                    </tr>
+                </table>
+            </form> </center>
+        </div>
+        <footer>
+            @Study MBBS Abroad
+        </footer>
+    </body>
+</html>
