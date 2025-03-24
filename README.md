@@ -12,7 +12,7 @@ This is a **fully responsive landing page** designed for students who want to st
 
 
 **To download this project on your local system:-**
-git clone https://github.com/YOUR_USERNAME/study-mbbs-landing-page.git
+git clone https://github.com/shreyaindia/Study-MBBS-Landing-Page
  Open the Project Folder
  Open the Project in a Browser
 Simply double-click on the index.html file.
